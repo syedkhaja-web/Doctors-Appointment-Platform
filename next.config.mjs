@@ -11,6 +11,9 @@ const nextConfig = {
       },
     ],
   },
+  // Optimize for production
+  output: "standalone", // For Docker deployments
+  poweredByHeader: false, // Remove X-Powered-By header
 };
 
 export default nextConfig;
