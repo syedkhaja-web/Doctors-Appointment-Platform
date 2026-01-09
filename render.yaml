@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: doctors-appointment-platform
+    env: node
+    buildCommand: npm install && npm run build && npx prisma generate
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+        sync: false
+      - key: CLERK_SECRET_KEY
+        sync: false
+      - key: NEXT_PUBLIC_VONAGE_APPLICATION_ID
+        sync: false
+      - key: VONAGE_PRIVATE_KEY
+        sync: false
